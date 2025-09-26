@@ -10,6 +10,6 @@ Creates many commits
 
 Creates many files
 
-## branch-clean.sh
+## branch_clean.sh
 
 Deletes branches that have been merged
