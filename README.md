@@ -9,3 +9,7 @@ Creates many commits
 ## files.py
 
 Creates many files
+
+## branch-clean.sh
+
+Deletes branches that have been merged
