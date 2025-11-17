@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-echo "WIP"
-
 cd "$1"
 CURRENT_BRANCH="$(git branch --show-current)"
 echo "${CURRENT_BRANCH}"
