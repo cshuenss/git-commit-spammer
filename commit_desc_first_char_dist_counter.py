@@ -32,11 +32,25 @@ number = 0
 symbol = 0
 empty = 0
 
+oops = 0
+eslint = 0
+unused_import = 0
+f = 0
+
 for commit in commits:
     if (len(commit) == 0):
         continue
+    commit_split = commit.split(" ")
+    if (commit_split[1].lower() == "oops"):
+        oops += 1
+    if ("eslint" in commit.lower()):
+        eslint += 1
+    if ("unused import" in commit.lower()):
+        unused_import += 1
+    if ("fuck" in commit.lower()):
+        f += 1
     try:
-        first_word = commit.split(" ")[1]
+        first_word = commit_split[1]
         if (first_word[0].isalpha()):
             if (first_word[0].isupper()):
                 uppercase += 1
@@ -54,3 +68,8 @@ print(f"uppercase: {uppercase}\n"\
       f"number: {number}\n"\
       f"symbol: {symbol}\n"\
       f"empty: {empty}")
+
+print(f"oops: {oops}\n"\
+      f"eslint: {eslint}\n"\
+      f"unused import: {unused_import}\n"\
+      f"fuck: {f}")
