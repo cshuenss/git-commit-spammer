@@ -20,7 +20,7 @@ echo "\nKeep branches:\n"
 # ALL_BRANCHES is a superset of DEL_BRANCHES, so any lines that do not appear once only appear in ALL_BRANCHES
 sort <(echo "${DEL_BRANCHES}") <(echo "${ALL_BRANCHES}") | uniq -u
 
-read "?Proceed? [Y/n] "
+read "?Proceed? [y/N] "
 if [[ ${REPLY} =~ ^[Yy]$ ]] then
     echo "${DEL_BRANCHES}" | xargs --no-run-if-empty git branch -d
     echo "Deleted branches"
