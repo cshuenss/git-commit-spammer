@@ -28,4 +28,4 @@ else
     echo "Aborting"
 fi
 
-git checkout "${CURRENT_BRANCH}" >/dev/null 2&>1
+git checkout "${CURRENT_BRANCH}" >/dev/null 2>&1
